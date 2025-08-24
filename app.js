@@ -25,7 +25,7 @@ app.use(express.static(path.join(rootDir, 'public')))
 app.use(errorsController.pageNotFound);
 
 const PORT = 3000;
-const DB_PATH = "mongodb+srv://sporanik:dada@completecoading.6ob9nbp.mongodb.net/airbnb?retryWrites=true&w=majority&appName=completeCoading";
+const DB_PATH = "mongodb+srv://sporanik:****@completecoading.6ob9nbp.mongodb.net/airbnb?retryWrites=true&w=majority&appName=completeCoading";
 
 mongoose.connect(DB_PATH).then(() => {
   console.log('Connected to Mongo');
@@ -34,4 +34,5 @@ mongoose.connect(DB_PATH).then(() => {
   });
 }).catch(err => {
   console.log('Error while connecting to Mongo: ', err);
+
 });
